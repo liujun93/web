@@ -46,7 +46,7 @@ export default function Sj() {
                             Use our module today.
                         </chakra.span>
                     </chakra.h2>
-                    <Code>npm install cosmology</Code>
+                    <Code>npm install -g cosmology</Code>
                     <Stack
                         direction={{ base: "column", sm: "row" }}
                         mt={{ base: 8, lg: 0 }}
@@ -71,7 +71,7 @@ export default function Sj() {
                                 bg: useColorModeValue("blue.500", "blue.600"),
                             }}
                         >
-                            view our module
+                            docs
                         </Link>
                         {/* <Link
                             w={["full", , "auto"]}
