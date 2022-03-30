@@ -37,7 +37,7 @@ export default function CallToActionWithAnnotation() {
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
-                        Automate your daily rewards and investment strategies in the Cosmos with the Cosmology app. Automate swaps, trades, and joining liquidity pools. Get the most out of your time in DeFi.
+                        Manage your daily rewards and investment strategies in the Cosmos with the Cosmology app. Use Cosmology to make cryptocurrency trades, join liquidity pools, and stake rewards.
                     </Text>
                     <Stack
                         direction={'column'}

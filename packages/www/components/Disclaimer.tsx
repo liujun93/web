@@ -109,6 +109,28 @@ const Disclaimer = () => {
                                 color={useColorModeValue("gray.900", "white")}
                             >
                                 <chakra.span display={{ base: "block", xl: "inline" }}>
+                                    Tax Compliance
+                                </chakra.span>
+                            </chakra.h2>
+
+                            <chakra.p
+                                mt={{ base: 3, sm: 5, md: 5 }}
+                                mx={{ sm: "auto", lg: 0 }}
+                                mb={6}
+                                fontSize={{ base: "lg", md: "xl" }}
+                                color="gray.500"
+                                lineHeight="base"
+                            >
+                                The users of Cosmology app are solely responsible to determinate what, if any, taxes apply to their cryptocurrency transactions. The owners of, or contributors to, the Cosmology app are NOT responsible for determining the taxes that apply to cryptocurrency transactions.
+                            </chakra.p>
+                            <chakra.h2
+                                fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+                                letterSpacing="tight"
+                                lineHeight="short"
+                                fontWeight="extrabold"
+                                color={useColorModeValue("gray.900", "white")}
+                            >
+                                <chakra.span display={{ base: "block", xl: "inline" }}>
                                     Software Disclaimer
                                 </chakra.span>
                             </chakra.h2>

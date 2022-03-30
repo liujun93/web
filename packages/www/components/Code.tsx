@@ -71,7 +71,7 @@ export default function Sj() {
                                 bg: useColorModeValue("blue.500", "blue.600"),
                             }}
                         >
-                            docs
+                            view docs
                         </Link>
                         {/* <Link
                             w={["full", , "auto"]}
