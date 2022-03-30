@@ -69,7 +69,7 @@ export default function S3c() {
                         />
                     }
                 >
-                    We love the Cosmos and Osmosis. Built for the Cosmos Ecosystem.
+                    We love the Cosmos and Osmosis communities. Purpose-built for these wonderful Ecosystems.
                 </Feature>
 
                 <Feature
