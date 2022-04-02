@@ -14,7 +14,7 @@ export default function S3c() {
             <Box>
                 <Icon
                     boxSize={12}
-                    color={useColorModeValue("blue.700")}
+                    color={useColorModeValue("purple.700")}
                     mb={4}
                     fill="none"
                     viewBox="0 0 24 24"

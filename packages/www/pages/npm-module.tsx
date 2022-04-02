@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import Code from '../components/Code';
+import NpmModule from '../components/NpmModule';
 import Header from '../components/Header';
+import Learn from '../components/Learn';
 import Footer from '../components/Footer';
 
 export default function CallToActionWithAnnotation() {
@@ -14,7 +15,8 @@ export default function CallToActionWithAnnotation() {
                 />
             </Head>
             <Header />
-            <Code />
+            <NpmModule />
+            <Learn />
             <Footer />
         </>
     );

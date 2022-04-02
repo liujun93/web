@@ -41,7 +41,7 @@ export default function Sj() {
                         <chakra.span display="block">Ready to dive in?</chakra.span>
                         <chakra.span
                             display="block"
-                            color={useColorModeValue("blue.400", "gray.500")}
+                            color={useColorModeValue("purple.400", "gray.500")}
                         >
                             Use our module today.
                         </chakra.span>
@@ -66,9 +66,9 @@ export default function Sj() {
                             href="https://www.npmjs.com/package/cosmology"
                             target="_target"
                             color={useColorModeValue("white")}
-                            bg={useColorModeValue("blue.400", "blue.500")}
+                            bg={useColorModeValue("purple.400", "purple.500")}
                             _hover={{
-                                bg: useColorModeValue("blue.500", "blue.600"),
+                                bg: useColorModeValue("purple.500", "purple.600"),
                             }}
                         >
                             view docs
@@ -84,10 +84,10 @@ export default function Sj() {
                             fontWeight="bold"
                             rounded="md"
                             shadow="md"
-                            color="blue.600"
+                            color="purple.600"
                             bg="white"
                             _hover={{
-                                bg: "blue.50",
+                                bg: "purple.50",
                             }}
                         >
                             Learn More

@@ -12,7 +12,7 @@ const CTA = () => {
     return (
         <Flex
             direction={{ base: "column", md: "row" }}
-            bg={useColorModeValue("blue.500")}
+            bg={useColorModeValue("purple.500")}
             px={8}
             py={24}
             mx="auto"
@@ -61,16 +61,17 @@ const CTA = () => {
                             border="solid transparent"
                             fontWeight="bold"
                             w="full"
-                            href="https://app.cosmology.finance"
+                            // href="https://app.cosmology.finance"
+                            href="https://www.npmjs.com/package/cosmology"
                             target="_target"
                             rounded="md"
                             color={useColorModeValue("white")}
-                            bg={useColorModeValue("blue.600", "blue.500")}
+                            bg={useColorModeValue("purple.600", "purple.500")}
                             _hover={{
-                                bg: useColorModeValue("blue.700", "blue.600"),
+                                bg: useColorModeValue("purple.700", "purple.600"),
                             }}
                         >
-                            Launch App
+                            Use Cosmology
                         </chakra.a>
                     </Box>
                 </Stack>

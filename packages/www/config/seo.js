@@ -24,8 +24,8 @@ module.exports = {
     ]
   },
   twitter: {
-    handle: '@cosmologyapp',
-    site: '@cosmologyapp'
+    handle: '@cosmology_fi',
+    site: '@cosmology_fi'
   },
   facebook: fbAppId
     ? {

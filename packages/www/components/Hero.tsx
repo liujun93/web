@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import {
+    chakra,
     Box,
     Heading,
     Container,
@@ -26,19 +27,47 @@ export default function CallToActionWithAnnotation() {
                     as={Box}
                     textAlign={'center'}
                     spacing={{ base: 8, md: 14 }}
-                    py={{ base: 20, md: 36 }}>
-                    <Heading
+                    py={{ base: 18, md: 24 }}>
+                    <chakra.h1
+                        mb={6}
+                        fontSize={{ base: "4xl", md: "6xl" }}
+                        fontWeight="bold"
+                        lineHeight="none"
+                        letterSpacing={{ base: "normal", md: "tight" }}
+                        color={useColorModeValue("gray.900", "gray.100")}
+                    >
+                        Optimize investment strategies{" "}
+                        <Text
+                            display={{ base: "block", lg: "inline" }}
+                            w="full"
+                            bgClip="text"
+                            bgGradient="linear(to-r, green.400,purple.500)"
+                            fontWeight="extrabold"
+                        >
+
+                            in the cosmos
+                        </Text>
+                    </chakra.h1>
+                    <chakra.p
+                        px={{ base: 0, lg: 24 }}
+                        mb={6}
+                        fontSize={{ base: "lg", md: "xl" }}
+                        color={useColorModeValue("gray.600", "gray.300")}
+                    >
+                        Cosmology is built from the ground up for Cosmos Staking and Osmosis DeFi to optimize your investment strategies. Cosmology optimizes staking and reinvesting liquidity pool rewards.
+                    </chakra.p>
+                    {/* <Heading
                         fontWeight={600}
                         fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
                         lineHeight={'110%'}>
-                        Automate DeFi <br />
-                        <Text as={'span'} color={'blue.400'}>
-                            investment strategies
+                        Optimize investment strategies <br />
+                        <Text as={'span'} color={'purple.400'}>
+                            across the cosmos
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
                         Manage your daily rewards and investment strategies in the Cosmos with the Cosmology app. Use Cosmology to make cryptocurrency trades, join liquidity pools, and stake rewards.
-                    </Text>
+                    </Text> */}
                     <Stack
                         direction={'column'}
                         spacing={3}
@@ -47,21 +76,22 @@ export default function CallToActionWithAnnotation() {
                         position={'relative'}>
                         <Button
                             as="a"
-                            href="https://app.cosmology.finance"
+                            href="https://www.npmjs.com/package/cosmology"
+                            // href="https://app.cosmology.finance"
                             target="_blank"
-                            colorScheme={'blue'}
-                            bg={'blue.400'}
+                            colorScheme={'purple'}
+                            bg={'purple.400'}
                             rounded={'full'}
                             px={6}
                             _hover={{
-                                bg: 'blue.500',
+                                bg: 'purple.500',
                             }}>
-                            Launch App
+                            Use Cosmology
                         </Button>
-                        <Button variant={'link'} colorScheme={'blue'} size={'sm'} as="a" href="/features">
+                        <Button variant={'link'} colorScheme={'purple'} size={'sm'} as="a" href="/learn">
                             Learn more
                         </Button>
-                        <Box>
+                        {/* <Box>
                             <Icon
                                 as={Arrow}
                                 color={useColorModeValue('gray.800', 'gray.300')}
@@ -79,7 +109,7 @@ export default function CallToActionWithAnnotation() {
                                 transform={'rotate(10deg)'}>
                                 Enter the app
                             </Text>
-                        </Box>
+                        </Box> */}
                     </Stack>
                 </Stack>
             </Container>

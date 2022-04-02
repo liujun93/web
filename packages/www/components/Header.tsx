@@ -80,12 +80,13 @@ export default function WithSubnavigation() {
                         fontSize={'sm'}
                         fontWeight={600}
                         color={'white'}
-                        bg={'blue.400'}
-                        href={'https://app.cosmology.finance'}
+                        bg={'purple.400'}
+                        href={'https://www.npmjs.com/package/cosmology'}
+                        // href={'https://app.cosmology.finance'}
                         _hover={{
-                            bg: 'blue.300',
+                            bg: 'purple.300',
                         }}>
-                        App
+                        Use Cosmology
                     </Button>
                 </Stack>
             </Flex>
@@ -154,12 +155,12 @@ const DesktopSubNav = ({ label, href, subLabel, target }: NavItem) => {
             target={target}
             p={2}
             rounded={'md'}
-            _hover={{ bg: useColorModeValue('blue.50', 'gray.900') }}>
+            _hover={{ bg: useColorModeValue('purple.50', 'gray.900') }}>
             <Stack direction={'row'} align={'center'}>
                 <Box>
                     <Text
                         transition={'all .3s ease'}
-                        _groupHover={{ color: 'blue.400' }}
+                        _groupHover={{ color: 'purple.400' }}
                         fontWeight={500}>
                         {label}
                     </Text>
@@ -173,7 +174,7 @@ const DesktopSubNav = ({ label, href, subLabel, target }: NavItem) => {
                     justify={'flex-end'}
                     align={'center'}
                     flex={1}>
-                    <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+                    <Icon color={'purple.400'} w={5} h={5} as={ChevronRightIcon} />
                 </Flex>
             </Stack>
         </Link>
@@ -256,20 +257,25 @@ const NAV_ITEMS: Array<NavItem> = [
         label: 'Cosmology',
         children: [
             {
-                label: 'App',
+                label: 'Tutorials',
+                subLabel: 'Learn how to use Cosmology',
+                href: '/learn',
+            },
+            {
+                label: 'Overview',
+                subLabel: 'About Cosmology',
+                href: '/overview',
+            },
+            // {
+            //     label: 'NPM module',
+            //     subLabel: 'Use Cosmology today with our npm module',
+            //     href: '/npm-module',
+            // },
+            {
+                label: 'Beta UI',
                 subLabel: 'Automate Strategies with our product',
                 href: 'https://app.cosmology.finance',
                 target: '_target'
-            },
-            {
-                label: 'Learn More',
-                subLabel: 'Learn more about Cosmology',
-                href: '/features',
-            },
-            {
-                label: 'NPM module',
-                subLabel: 'Automate with our module',
-                href: '/library',
             },
         ],
     },
