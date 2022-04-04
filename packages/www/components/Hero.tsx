@@ -76,9 +76,9 @@ export default function CallToActionWithAnnotation() {
                         position={'relative'}>
                         <Button
                             as="a"
-                            href="https://www.npmjs.com/package/cosmology"
+                            href="/learn"
                             // href="https://app.cosmology.finance"
-                            target="_blank"
+                            // target="_blank"
                             colorScheme={'purple'}
                             bg={'purple.400'}
                             rounded={'full'}
@@ -86,10 +86,17 @@ export default function CallToActionWithAnnotation() {
                             _hover={{
                                 bg: 'purple.500',
                             }}>
-                            Use Cosmology
+                            Get Started
                         </Button>
-                        <Button variant={'link'} colorScheme={'purple'} size={'sm'} as="a" href="/learn">
-                            Learn more
+                        <Button
+                            variant={'link'}
+                            colorScheme={'purple'}
+                            size={'sm'}
+                            as="a"
+                            href="https://www.npmjs.com/package/cosmology"
+                            target={'_blank'}
+                        >
+                            npm module
                         </Button>
                         {/* <Box>
                             <Icon

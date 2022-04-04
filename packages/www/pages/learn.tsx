@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import NpmModule from '../components/NpmModule';
 import Header from '../components/Header';
-import Learn from '../components/Learn';
+import LearnBasics from '../components/LearnBasics';
 import LearnHeader from '../components/LearnHeader';
+import LearnSecurity from '../components/LearnSecurity';
 import Footer from '../components/Footer';
 
 export default function CallToActionWithAnnotation() {
@@ -17,8 +18,9 @@ export default function CallToActionWithAnnotation() {
             </Head>
             <Header />
             <LearnHeader />
-            <Learn />
             <NpmModule />
+            <LearnSecurity />
+            <LearnBasics />
             <Footer />
         </>
     );

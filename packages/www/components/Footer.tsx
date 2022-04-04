@@ -17,11 +17,11 @@ import Logo from './Logo';
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
     return (
-      <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-        {children}
-      </Text>
+        <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+            {children}
+        </Text>
     );
-  };
+};
 
 const SocialButton = ({
     children,
@@ -61,23 +61,23 @@ export default function LargeWithAppLinksAndSocial() {
             py={12}
         >
             <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          <Stack align={'flex-start'}>
-            <ListHeader>Cosmology</ListHeader>
-            <Link href={'/'}>Home</Link>
-            </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Product</ListHeader>
-            <Link href={'/overview'}>Overview</Link>
-            {/* <Link href={'/npm-module'}>Npm Module</Link> */}
-            <Link href={'/learn'}>Tutorials</Link>
-          </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Legal</ListHeader>
-            <Link href={'/disclaimer'}>Disclaimer</Link>
-          </Stack>
-        </SimpleGrid>
-      </Container>
+                <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+                    <Stack align={'flex-start'}>
+                        <ListHeader>Cosmology</ListHeader>
+                        <Link href={'/'}>Home</Link>
+                    </Stack>
+                    <Stack align={'flex-start'}>
+                        <ListHeader>Product</ListHeader>
+                        <Link href={'/overview'}>Overview</Link>
+                        {/* <Link href={'/npm-module'}>Npm Module</Link> */}
+                        <Link href={'/learn'}>Tutorials</Link>
+                    </Stack>
+                    <Stack align={'flex-start'}>
+                        <ListHeader>Legal</ListHeader>
+                        <Link href={'/disclaimer'}>Disclaimer</Link>
+                    </Stack>
+                </SimpleGrid>
+            </Container>
             <Flex
                 align={'center'}
                 _before={{
@@ -121,7 +121,7 @@ export default function LargeWithAppLinksAndSocial() {
                         <SocialButton label={'Discord'} href={'https://discord.gg/xh3ZwHj2qQ'}>
                             <FaDiscord />
                         </SocialButton>
-                        <SocialButton label={'YouTube'} href={'"https://www.youtube.com/channel/UCA9jzRlnUJRxec8S5Lt7Vcw"'}>
+                        <SocialButton label={'YouTube'} href={'https://www.youtube.com/channel/UCA9jzRlnUJRxec8S5Lt7Vcw'}>
                             <FaYoutube />
                         </SocialButton>
                     </Stack>

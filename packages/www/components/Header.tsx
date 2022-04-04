@@ -271,12 +271,12 @@ const NAV_ITEMS: Array<NavItem> = [
             //     subLabel: 'Use Cosmology today with our npm module',
             //     href: '/npm-module',
             // },
-            {
-                label: 'Beta UI',
-                subLabel: 'Automate Strategies with our product',
-                href: 'https://app.cosmology.finance',
-                target: '_target'
-            },
+            // {
+            //     label: 'Beta UI',
+            //     subLabel: 'Automate Strategies with our product',
+            //     href: 'https://app.cosmology.finance',
+            //     target: '_target'
+            // },
         ],
     },
     // {
