@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Styled UI Blocks",
   "author": "Web, Inc. <devops@webincubator.com>",
-  "homepage": "https://github.com/CosmologyFinance/cosmology/tree/master/packages/admin-blocks#readme",
+  "homepage": "https://github.com/cosmology-finance/web/tree/master/packages/admin-blocks#readme",
   "license": "SEE LICENSE IN LICENSE",
   "main": "main/index.js",
   "module": "module/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CosmologyFinance/cosmology"
+    "url": "https://github.com/cosmology-finance/web"
   },
   "scripts": {
     "build:main": "cross-env BABEL_ENV=production babel src --out-dir main --delete-dir-on-start --extensions \".tsx,.ts,.js\"",
@@ -39,7 +39,7 @@
     "build-storybook": "build-storybook -s public"
   },
   "bugs": {
-    "url": "https://github.com/CosmologyFinance/cosmology/issues"
+    "url": "https://github.com/cosmology-finance/web/issues"
   },
   "devDependencies": {
     "@babel/cli": "7.12.13",
