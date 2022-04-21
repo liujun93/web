@@ -6,7 +6,7 @@ module.exports = {
     "@storybook/addon-storysource",
     '@storybook/addon-links/register',
     '@storybook/addon-viewport/register',
+    '@storybook/addon-knobs/register',
     '@chakra-ui/storybook-addon'
-    // 'storybook-addon-chakra-theme/dist/register'
   ]
 }
