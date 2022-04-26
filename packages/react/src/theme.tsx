@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react"
 
-export const defaultTheme = extendTheme({
+export const defaultThemeObject = {
     fonts: {
         body: 'Inter, system-ui, sans-serif',
         heading: 'Work Sans, system-ui, sans-serif',
@@ -60,4 +60,6 @@ export const defaultTheme = extendTheme({
             },
         },
     },
-});
+};
+
+export const defaultTheme = extendTheme(defaultThemeObject);
