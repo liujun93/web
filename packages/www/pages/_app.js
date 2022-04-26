@@ -1,6 +1,4 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import { BlockchainStore } from '@cosmology/core';
-import { StoreProvider } from '@cosmology/react';
 
 const colors = {
   brand: {
@@ -12,15 +10,11 @@ const colors = {
 
 const theme = extendTheme({ colors });
 
-const store = new BlockchainStore();
-
 function CosmologyApp({ Component, pageProps }) {
   return (
-    <StoreProvider store={store}>
-      <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
-    </StoreProvider>
+    <ChakraProvider theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
   );
 }
 
