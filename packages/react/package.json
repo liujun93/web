@@ -7,11 +7,13 @@
   "license": "SEE LICENSE IN LICENSE",
   "main": "main/index.js",
   "module": "module/index.js",
+  "typings": "types/index.d.ts",
   "directories": {
     "lib": "src",
     "test": "__tests__"
   },
   "files": [
+    "types",
     "main",
     "module"
   ],
