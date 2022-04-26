@@ -1,4 +1,5 @@
 export * from './layout';
+export * from './theme';
 
 export { default as ManageLiquidity } from './cosmos/pools/ManageLiquidity';
 export { default as ListPools } from './cosmos/pools/ListPools';
