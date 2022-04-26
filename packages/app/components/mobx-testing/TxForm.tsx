@@ -1,5 +1,5 @@
 import React, { useState, FC } from 'react';
-import { useStore } from '@cosmology/react';
+import { useStore } from '../../testing-mobx/store-react';
 
 import {
     Button,

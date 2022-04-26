@@ -1,6 +1,7 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import { BlockchainStore } from '@cosmology/core';
-import { StoreProvider } from '@cosmology/react';
+
+import { BlockchainStore } from '../testing-mobx/store';
+import { StoreProvider } from '../testing-mobx/store-react';
 
 const colors = {
   brand: {

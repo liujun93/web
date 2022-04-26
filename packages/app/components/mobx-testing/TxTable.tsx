@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react";
-import { ITx } from "@cosmology/core";
+import { ITx } from "../../testing-mobx/store";
 import {
     Flex,
     useColorModeValue,

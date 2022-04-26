@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useStore } from '@cosmology/react';
+import { useStore } from '../../testing-mobx/store-react';
 import { observer } from 'mobx-react-lite';
 import { NoneFound } from './NoneFound';
 import { TxTable } from './TxTable';

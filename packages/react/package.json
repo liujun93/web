@@ -26,6 +26,7 @@
     "build:main": "cross-env BABEL_ENV=production babel src --out-dir main --delete-dir-on-start --extensions \".tsx,.ts,.js\"",
     "build:module": "cross-env MODULE=true babel src --out-dir module --delete-dir-on-start  --extensions \".tsx,.ts,.js\"",
     "build": "npm run build:module && npm run build:main",
+    "build:ts": "tsc --project ./tsconfig.json",
     "prepare": "npm run build",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint src --ext .js",
