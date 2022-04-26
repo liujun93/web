@@ -13,3 +13,10 @@ yarn bootstrap
 cd ./packages/react
 yarn storybook
 ```
+
+## next
+
+```
+cd ./packages/app
+yarn dev
+```
