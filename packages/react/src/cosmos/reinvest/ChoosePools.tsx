@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Image,
@@ -18,9 +18,7 @@ import {
   Skeleton,
   SystemStyleObject,
   Link,
-  Checkbox,
-  Center,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import {
   AsyncSelect,
   OptionProps,
@@ -28,10 +26,10 @@ import {
   GroupBase,
   ControlProps,
   MenuListProps,
-} from 'chakra-react-select';
-import { IoMdSearch } from 'react-icons/io';
-import { RiCloseCircleFill } from 'react-icons/ri';
-import { osmosis } from '../asset-list';
+} from "chakra-react-select";
+import { IoMdSearch } from "react-icons/io";
+import { RiCloseCircleFill } from "react-icons/ri";
+import { osmosis } from "../asset-list";
 
 interface poolsDataType {
   key: string;
@@ -63,11 +61,11 @@ const SkeletonPoolsLoading = () => {
   return (
     <Flex
       border="1px solid"
-      borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+      borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
       borderRadius="3xl"
       py={4}
       px={{ base: 4, md: 8 }}
-      flexDirection={{ base: 'column', sm: 'row' }}
+      flexDirection={{ base: "column", sm: "row" }}
       mb={8}
     >
       <Flex align="center" flex={2} mb={{ base: 4, sm: 0 }}>
@@ -81,7 +79,7 @@ const SkeletonPoolsLoading = () => {
           bg="whiteAlpha.900"
           borderRadius="full"
           border="1px solid"
-          borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+          borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
           overflow="hidden"
           justify="center"
           align="center"
@@ -90,7 +88,7 @@ const SkeletonPoolsLoading = () => {
             size="lg"
             thickness="4px"
             speed="0.55s"
-            color={useColorModeValue('primary.600', 'primary.200')}
+            color={useColorModeValue("primary.600", "primary.200")}
           />
         </Flex>
         <Flex
@@ -105,7 +103,7 @@ const SkeletonPoolsLoading = () => {
           bg="whiteAlpha.900"
           borderRadius="full"
           border="1px solid"
-          borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+          borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
           overflow="hidden"
           justify="center"
           align="center"
@@ -114,11 +112,11 @@ const SkeletonPoolsLoading = () => {
             size="lg"
             thickness="4px"
             speed="0.5s"
-            color={useColorModeValue('primary.600', 'primary.200')}
+            color={useColorModeValue("primary.600", "primary.200")}
           />
         </Flex>
         <Box flex={1} pr={{ base: 0, sm: 6 }}>
-          <Skeleton w={{ base: 'full', md: 48 }} h={6} mb={4} />
+          <Skeleton w={{ base: "full", md: 48 }} h={6} mb={4} />
           <Skeleton w={16} h={4} />
         </Box>
       </Flex>
@@ -233,7 +231,7 @@ const Pools = ({
           align="center"
           justify="center"
           border="1px solid"
-          borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+          borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
           borderRadius="3xl"
           overflow="hidden"
           px={8}
@@ -241,8 +239,8 @@ const Pools = ({
         >
           <Text
             background={useColorModeValue(
-              'linear-gradient(180deg, rgba(0,60,255,1) 0%, rgba(130,75,220,1) 50%, rgba(255,0,0,1) 100%)',
-              'linear-gradient(180deg, rgba(175,20,255,1) 0%, rgba(65,90,255,1) 50%, rgba(255,45,45,1) 100%)'
+              "linear-gradient(180deg, rgba(0,60,255,1) 0%, rgba(130,75,220,1) 50%, rgba(255,0,0,1) 100%)",
+              "linear-gradient(180deg, rgba(175,20,255,1) 0%, rgba(65,90,255,1) 50%, rgba(255,45,45,1) 100%)"
             )}
             backgroundClip="text"
             color="transparent"
@@ -257,11 +255,11 @@ const Pools = ({
         poolsData.map(({ key, token1, token2, percent }, i) => {
           return (
             <Grid
-              templateColumns={{ base: 'auto 1fr', sm: 'auto 2fr 1fr' }}
+              templateColumns={{ base: "auto 1fr", sm: "auto 2fr 1fr" }}
               position="relative"
               key={i}
               border="1px solid"
-              borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+              borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
               borderRadius="3xl"
               alignItems="center"
               onMouseEnter={() => setShoeRemoveIcon(i)}
@@ -298,8 +296,8 @@ const Pools = ({
                     borderRadius="full"
                     border="1px solid"
                     borderColor={useColorModeValue(
-                      'gray.100',
-                      'whiteAlpha.100'
+                      "gray.100",
+                      "whiteAlpha.100"
                     )}
                     overflow="hidden"
                   >
@@ -307,7 +305,10 @@ const Pools = ({
                   </Box>
                   <Box
                     position="relative"
-                    left={{ base: useSmallIcons ? -3 : -5, sm: useSmallIcons ? -4 : -6 }}
+                    left={{
+                      base: useSmallIcons ? -3 : -5,
+                      sm: useSmallIcons ? -4 : -6,
+                    }}
                     zIndex={5}
                     minW={{
                       base: useSmallIcons ? 8 : 10,
@@ -331,12 +332,12 @@ const Pools = ({
                     }}
                     w="full"
                     h="full"
-                    bg={!token2 ? '' : 'whiteAlpha.900'}
+                    bg={!token2 ? "" : "whiteAlpha.900"}
                     borderRadius="full"
-                    border={!token2 ? '' : '1px solid'}
+                    border={!token2 ? "" : "1px solid"}
                     borderColor={useColorModeValue(
-                      'gray.100',
-                      'whiteAlpha.100'
+                      "gray.100",
+                      "whiteAlpha.100"
                     )}
                     overflow="hidden"
                   >
@@ -348,11 +349,11 @@ const Pools = ({
                 <Text fontWeight="semibold" wordBreak="break-word">
                   {key}
                 </Text>
-                <Text color={useColorModeValue('gray.600', 'whiteAlpha.700')}>
+                <Text color={useColorModeValue("gray.600", "whiteAlpha.700")}>
                   {percent}%
                 </Text>
               </GridItem>
-              <GridItem colSpan={{ base: 4, sm: 'auto' }}>
+              <GridItem colSpan={{ base: 4, sm: "auto" }}>
                 <Slider
                   step={0.01}
                   colorScheme="primary"
@@ -384,9 +385,9 @@ const Pools = ({
                     minH="fit-content"
                     borderRadius="full"
                     color="red.500"
-                    _hover={{ color: 'red.400' }}
-                    _active={{ color: 'red.700' }}
-                    _focus={{ outline: 'none', color: 'red.600' }}
+                    _hover={{ color: "red.400" }}
+                    _active={{ color: "red.700" }}
+                    _focus={{ outline: "none", color: "red.600" }}
                     paddingInline={0}
                     onClick={() => setRemovePool(poolsData[i])}
                   >
@@ -416,57 +417,57 @@ const AllPoolOptions = ({
   const customStyles = {
     menu: (provided: SystemStyleObject) => ({
       ...provided,
-      position: 'relative',
+      position: "relative",
       mt: 4,
       mb: 6,
     }),
     menuList: (provided: SystemStyleObject) => ({
       ...provided,
-      maxH: 'xl',
-      h: 'auto',
-      bg: 'transparent',
-      border: 'none',
-      borderRadius: 'none',
+      maxH: "xl",
+      h: "auto",
+      bg: "transparent",
+      border: "none",
+      borderRadius: "none",
       py: 0,
       pr: 2,
       // For Firefox
-      scrollbarWidth: 'auto',
+      scrollbarWidth: "auto",
       scrollbarColor: useColorModeValue(
-        'rgba(0,0,0,0.3) rgba(0,0,0,0.2)',
-        'rgba(255,255,255,0.2) rgba(255,255,255,0.1)'
+        "rgba(0,0,0,0.3) rgba(0,0,0,0.2)",
+        "rgba(255,255,255,0.2) rgba(255,255,255,0.1)"
       ),
       // For Chrome and other browsers except Firefox
-      '&::-webkit-scrollbar': {
-        width: '14px',
-        borderRadius: '3px',
+      "&::-webkit-scrollbar": {
+        width: "14px",
+        borderRadius: "3px",
       },
-      '&::-webkit-scrollbar-thumb': {
+      "&::-webkit-scrollbar-thumb": {
         background: useColorModeValue(
-          'rgba(0,0,0,0.08)',
-          'rgba(255,255,255,0.08)'
+          "rgba(0,0,0,0.08)",
+          "rgba(255,255,255,0.08)"
         ),
-        borderRadius: '3px',
+        borderRadius: "3px",
       },
     }),
     control: (provided: SystemStyleObject) => ({
       ...provided,
-      bg: 'whiteAlpha.200',
+      bg: "whiteAlpha.200",
     }),
     option: (provided: SystemStyleObject, state: { isSelected: boolean }) => ({
       ...provided,
-      borderRadius: 'md',
+      borderRadius: "md",
       pl: 0,
       bg: state.isSelected
-        ? useColorModeValue('primary.100', 'primary.500')
-        : 'transparent',
-      color: 'inherit',
+        ? useColorModeValue("primary.100", "primary.500")
+        : "transparent",
+      color: "inherit",
       _hover: {
         bg: state.isSelected
-          ? useColorModeValue('primary.100', 'primary.500')
-          : useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          ? useColorModeValue("primary.100", "primary.500")
+          : useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       },
       _disabled: {
-        _hover: { bg: 'transparent' },
+        _hover: { bg: "transparent" },
       },
     }),
   };
@@ -495,15 +496,15 @@ const AllPoolOptions = ({
     return (
       <Box
         border="1px solid"
-        borderColor={useColorModeValue('blackAlpha.50', 'whiteAlpha.50')}
+        borderColor={useColorModeValue("blackAlpha.50", "whiteAlpha.50")}
         borderRadius="md"
         overflow="hidden"
       >
         <Grid
           w="full"
           templateColumns={{
-            base: '2.5rem 1fr',
-            md: '2.5rem 3fr 1fr',
+            base: "2.5rem 1fr",
+            md: "2.5rem 3fr 1fr",
           }}
           rowGap={1}
           position="sticky"
@@ -513,7 +514,7 @@ const AllPoolOptions = ({
           px={4}
           py={2}
           mb="1px"
-          bg={useColorModeValue('blackAlpha.50', 'whiteAlpha.50')}
+          bg={useColorModeValue("blackAlpha.50", "whiteAlpha.50")}
           fontSize="sm"
           fontWeight="medium"
         >
@@ -523,9 +524,9 @@ const AllPoolOptions = ({
           <GridItem>
             <Text>POOLS</Text>
           </GridItem>
-          <GridItem colSpan={{ base: 2, md: 'auto' }}>
+          <GridItem colSpan={{ base: 2, md: "auto" }}>
             <Text
-              textAlign={{ base: 'start', md: 'end' }}
+              textAlign={{ base: "start", md: "end" }}
               pl={{ base: 10, md: 0 }}
               pr={{ md: 9 }}
             >
@@ -551,9 +552,9 @@ const AllPoolOptions = ({
         <Grid
           w="full"
           templateColumns={{
-            base: '2.5rem 1fr',
-            sm: '2.5rem auto 1fr',
-            md: '2.5rem auto 2fr 1fr',
+            base: "2.5rem 1fr",
+            sm: "2.5rem auto 1fr",
+            md: "2.5rem auto 2fr 1fr",
           }}
           rowGap={{ base: 2, sm: hoverItem === data.key ? 2 : 0 }}
           position="relative"
@@ -562,7 +563,7 @@ const AllPoolOptions = ({
           onMouseLeave={() => setHoverItem(null)}
           py={{ base: 4, md: 2 }}
         >
-          <GridItem rowSpan={{ base: 3, sm: 2, md: 'auto' }} alignSelf="center">
+          <GridItem rowSpan={{ base: 3, sm: 2, md: "auto" }} alignSelf="center">
             <Text fontSize="lg" fontWeight="semibold" textAlign="center">
               {OrderedListItem}
             </Text>
@@ -591,14 +592,17 @@ const AllPoolOptions = ({
                 bg="whiteAlpha.900"
                 borderRadius="full"
                 border="1px solid"
-                borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+                borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
                 overflow="hidden"
               >
                 <Image src={data.token1.imgSrc} />
               </Box>
               <Box
                 position="relative"
-                left={{ base: useSmallIcons ? -3 : -5, sm: useSmallIcons ? -4 : -6 }}
+                left={{
+                  base: useSmallIcons ? -3 : -5,
+                  sm: useSmallIcons ? -4 : -6,
+                }}
                 zIndex={5}
                 minW={{
                   base: useSmallIcons ? 8 : 12,
@@ -618,10 +622,10 @@ const AllPoolOptions = ({
                 }}
                 w="full"
                 h="full"
-                bg={!data.token2 ? '' : 'whiteAlpha.900'}
+                bg={!data.token2 ? "" : "whiteAlpha.900"}
                 borderRadius="full"
-                border={!data.token2 ? '' : '1px solid'}
-                borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+                border={!data.token2 ? "" : "1px solid"}
+                borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
                 overflow="hidden"
               >
                 <Image src={data.token2?.imgSrc} />
@@ -629,8 +633,8 @@ const AllPoolOptions = ({
             </Flex>
           </GridItem>
           <GridItem
-            colStart={{ base: 2, sm: 'auto' }}
-            colEnd={{ base: 3, sm: 'auto' }}
+            colStart={{ base: 2, sm: "auto" }}
+            colEnd={{ base: 3, sm: "auto" }}
           >
             <Text fontSize="lg" fontWeight="semibold" wordBreak="break-word">
               {data.key}
@@ -639,13 +643,13 @@ const AllPoolOptions = ({
           <GridItem
             display="flex"
             justifyContent="end"
-            colStart={{ base: 2, md: 'auto' }}
-            colEnd={{ base: 4, md: 'auto' }}
+            colStart={{ base: 2, md: "auto" }}
+            colEnd={{ base: 4, md: "auto" }}
           >
             {hoverItem === data.key && (
               <Button
                 colorScheme="primary"
-                w={{ base: 'full', md: 'auto' }}
+                w={{ base: "full", md: "auto" }}
                 borderRadius="full"
               >
                 Add Pool
@@ -688,7 +692,7 @@ const AllPoolOptions = ({
       defaultOptions={optionsData}
       value={value}
       onChange={(val) => {
-        const value = (val as any) as optionsDataType[];
+        const value = val as any as optionsDataType[];
         value.map((v) => setSelectedToken(v));
       }}
       components={{
@@ -736,14 +740,17 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
     });
     const getOptionsData = [...Array(poolOptionToken1.length)]
       .fill(undefined)
-      .map((v, i) => {
+      .map((_, i) => {
         return {
-          label: `${poolOptionToken1[i].name}${poolOptionToken2[i] ? '/' + poolOptionToken2[i].name : ''
-            }`,
-          key: `${poolOptionToken1[i].name}${poolOptionToken2[i] ? '/' + poolOptionToken2[i].name : ''
-            }`,
-          value: `${poolOptionToken1[i].name}${poolOptionToken2[i] ? '/' + poolOptionToken2[i].name : ''
-            }`,
+          label: `${poolOptionToken1[i].name}${
+            poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
+          }`,
+          key: `${poolOptionToken1[i].name}${
+            poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
+          }`,
+          value: `${poolOptionToken1[i].name}${
+            poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
+          }`,
           token1: poolOptionToken1[i],
           token2: poolOptionToken2[i],
         };
@@ -755,13 +762,13 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
     const formatOptions = getOptionsData.filter(
       (v) => !getRandomPools.map((val) => val.key).includes(v.key)
     );
-    const formatPools = getRandomPools.map(({ key, token1, token2 }, i) => {
+    const formatPools = getRandomPools.map(({ key, token1, token2 }) => {
       const formatValue = Math.random() * 100 + 1;
       return {
         key: key,
         token1: token1,
         token2: token2,
-        percent: formatValue === 100 ? '100' : formatValue.toFixed(2),
+        percent: formatValue === 100 ? "100" : formatValue.toFixed(2),
       };
     });
     setPoolsData(formatPools);
@@ -774,7 +781,7 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
         key: selectedToken.key,
         token1: selectedToken.token1,
         token2: selectedToken.token2,
-        percent: '0',
+        percent: "0",
       };
       const concatArr = [...poolsData, formatSelectedToken];
       const updateOptions = optionsData.filter(
@@ -790,12 +797,15 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
     if (removePool) {
       const updatePoolsArr = poolsData.filter((v) => v !== removePool);
       const formatData = {
-        label: `${removePool.token1.name}${removePool.token2 ? '/' + removePool.token2.name : ''
-          }`,
-        key: `${removePool.token1.name}${removePool.token2 ? '/' + removePool.token2.name : ''
-          }`,
-        value: `${removePool.token1.name}${removePool.token2 ? '/' + removePool.token2.name : ''
-          }`,
+        label: `${removePool.token1.name}${
+          removePool.token2 ? "/" + removePool.token2.name : ""
+        }`,
+        key: `${removePool.token1.name}${
+          removePool.token2 ? "/" + removePool.token2.name : ""
+        }`,
+        value: `${removePool.token1.name}${
+          removePool.token2 ? "/" + removePool.token2.name : ""
+        }`,
         token1: removePool.token1,
         token2: removePool.token2,
       };
@@ -814,7 +824,7 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
     <Box p={8}>
       <Box
         border="1px solid"
-        borderColor={useColorModeValue('gray.100', 'whiteAlpha.100')}
+        borderColor={useColorModeValue("gray.100", "whiteAlpha.100")}
         borderRadius="3xl"
         p={{ base: 6, md: 8 }}
       >
@@ -850,8 +860,8 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
         </Button>
       </Box>
       <Text textAlign="center">
-        Want this to run automatically every day? Use our{' '}
-        <Link href="/" color={useColorModeValue('primary.500', 'primary.300')}>
+        Want this to run automatically every day? Use our{" "}
+        <Link href="/" color={useColorModeValue("primary.500", "primary.300")}>
           NPM module
         </Link>
       </Text>
