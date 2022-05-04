@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -24,7 +24,7 @@ import {
   EditableInput,
   EditablePreview,
   useOutsideClick,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import {
   AsyncSelect,
   ControlProps,
@@ -32,17 +32,17 @@ import {
   chakraComponents,
   OptionBase,
   GroupBase,
-} from 'chakra-react-select';
+} from "chakra-react-select";
 import {
   BsHexagon,
   BsHexagonFill,
   BsExclamationCircleFill,
-} from 'react-icons/bs';
-import { RiSettings4Fill, RiSearch2Fill } from 'react-icons/ri';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { CgArrowsExchangeV } from 'react-icons/cg';
+} from "react-icons/bs";
+import { RiSettings4Fill, RiSearch2Fill } from "react-icons/ri";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { CgArrowsExchangeV } from "react-icons/cg";
 
-import { osmosis } from '../asset-list';
+import { osmosis } from "../asset-list";
 
 interface dataType extends OptionBase {
   label: string;
@@ -56,7 +56,6 @@ interface dataType extends OptionBase {
 }
 
 const RadioTag = (props: any) => {
-  const { value } = props;
   const { getInputProps, getCheckboxProps } = useRadio(props);
   const input = getInputProps();
   const checkbox = getCheckboxProps();
@@ -66,19 +65,18 @@ const RadioTag = (props: any) => {
       <input {...input} />
       <Box
         {...checkbox}
-        value={value}
         cursor="pointer"
-        bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
+        bg={useColorModeValue("blackAlpha.300", "whiteAlpha.300")}
         borderRadius="full"
         _checked={{
-          bg: 'primary.500',
-          color: 'white',
+          bg: "primary.500",
+          color: "white",
         }}
         _focus={{
-          boxShadow: 'outline',
+          boxShadow: "outline",
         }}
         _disabled={{
-          cursor: 'not-allowed',
+          cursor: "not-allowed",
           opacity: 0.5,
         }}
         px={5}
@@ -93,10 +91,10 @@ const RadioTag = (props: any) => {
 const Setting = () => {
   const { onToggle, onClose, isOpen } = useDisclosure();
   const initialFocusRef = useRef(null);
-  const options = ['1%', '3%', '5%', '2.5%'];
+  const options = ["1%", "3%", "5%", "2.5%"];
   const { getRootProps, getRadioProps } = useRadioGroup({
-    name: 'setting',
-    defaultValue: '1%',
+    name: "setting",
+    defaultValue: "1%",
     onChange: console.log,
   });
   const group = getRootProps();
@@ -115,16 +113,16 @@ const Setting = () => {
           h="min"
           color={
             isOpen
-              ? 'orange.300'
-              : useColorModeValue('blackAlpha.400', 'whiteAlpha.500')
+              ? "orange.300"
+              : useColorModeValue("blackAlpha.400", "whiteAlpha.500")
           }
           transition="all .5s"
           _hover={{
             color: isOpen
-              ? 'orange.200'
-              : useColorModeValue('blackAlpha.500', 'whiteAlpha.600'),
+              ? "orange.200"
+              : useColorModeValue("blackAlpha.500", "whiteAlpha.600"),
           }}
-          _focus={{ boxShadow: 'none' }}
+          _focus={{ boxShadow: "none" }}
           onClick={onToggle}
         >
           <Icon
@@ -132,7 +130,7 @@ const Setting = () => {
             as={BsHexagonFill}
             w={8}
             h={8}
-            color={useColorModeValue('gray.100', 'whiteAlpha.300')}
+            color={useColorModeValue("gray.100", "whiteAlpha.300")}
           />
           <Icon
             position="absolute"
@@ -156,9 +154,8 @@ const Setting = () => {
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        align="start"
-        bg={useColorModeValue('white', 'black')}
-        borderColor={useColorModeValue('blackAlpha.200', 'whiteAlpha.400')}
+        bg={useColorModeValue("white", "black")}
+        borderColor={useColorModeValue("blackAlpha.200", "whiteAlpha.400")}
         boxShadow="md"
         w="fit-content"
         right={4}
@@ -169,7 +166,7 @@ const Setting = () => {
           </Text>
           <Text
             fontWeight="semibold"
-            color={useColorModeValue('blackAlpha.500', 'whiteAlpha.600')}
+            color={useColorModeValue("blackAlpha.500", "whiteAlpha.600")}
             verticalAlign="middle"
             mb={4}
           >
@@ -177,7 +174,7 @@ const Setting = () => {
             <Icon as={BsExclamationCircleFill} color="orange.200" />
           </Text>
           <Grid
-            templateColumns={{ base: '1fr 1fr', sm: 'repeat(4, 1fr)' }}
+            templateColumns={{ base: "1fr 1fr", sm: "repeat(4, 1fr)" }}
             gap={4}
             {...group}
           >
@@ -186,7 +183,8 @@ const Setting = () => {
               return (
                 <RadioTag
                   key={value}
-                  isDisabled={value === '2.5%' ? true : false}
+                  value={value}
+                  isDisabled={value === "2.5%" ? true : false}
                   {...radio}
                 >
                   {value}
@@ -260,16 +258,16 @@ const FromToken = ({
   const [checked, setChecked] = useState([false, false]);
   const [checkedItems, setCheckedItems] = useState([
     {
-      label: 'MAX',
-      id: 'max',
-      lightBg: 'blackAlpha.300',
-      darkBg: 'whiteAlpha.300',
+      label: "MAX",
+      id: "max",
+      lightBg: "blackAlpha.300",
+      darkBg: "whiteAlpha.300",
     },
     {
-      label: 'HALF',
-      id: 'half',
-      lightBg: 'blackAlpha.300',
-      darkBg: 'whiteAlpha.300',
+      label: "HALF",
+      id: "half",
+      lightBg: "blackAlpha.300",
+      darkBg: "whiteAlpha.300",
     },
   ]);
   const fromMenuRef = useRef<HTMLDivElement | null>(null);
@@ -277,59 +275,59 @@ const FromToken = ({
   const customStyles = {
     control: (provided: SystemStyleObject) => ({
       ...provided,
-      bg: useColorModeValue('blackAlpha.50', 'whiteAlpha.50'),
+      bg: useColorModeValue("blackAlpha.50", "whiteAlpha.50"),
     }),
     menu: (provided: SystemStyleObject) => ({
       ...provided,
-      maxH: { base: 'sm', sm: '2xl' },
-      position: 'relative',
+      maxH: { base: "sm", sm: "2xl" },
+      position: "relative",
       mt: 6,
       mb: 0,
     }),
     menuList: (provided: SystemStyleObject) => ({
       ...provided,
-      bg: 'transparent',
-      border: 'none',
-      borderRadius: 'none',
+      bg: "transparent",
+      border: "none",
+      borderRadius: "none",
       py: 0,
       pr: { base: 2, sm: 4 },
       // For Firefox
-      scrollbarWidth: 'auto',
+      scrollbarWidth: "auto",
       scrollbarColor: useColorModeValue(
-        'rgba(0,0,0,0.3) rgba(0,0,0,0.2)',
-        'rgba(255,255,255,0.2) rgba(255,255,255,0.1)'
+        "rgba(0,0,0,0.3) rgba(0,0,0,0.2)",
+        "rgba(255,255,255,0.2) rgba(255,255,255,0.1)"
       ),
       // For Chrome and other browsers except Firefox
-      '&::-webkit-scrollbar': {
-        width: '18px',
+      "&::-webkit-scrollbar": {
+        width: "18px",
         background: useColorModeValue(
-          'rgba(160,160,160,0.1)',
-          'rgba(255,255,255,0.1)'
+          "rgba(160,160,160,0.1)",
+          "rgba(255,255,255,0.1)"
         ),
-        borderRadius: '4px',
+        borderRadius: "4px",
       },
-      '&::-webkit-scrollbar-thumb': {
+      "&::-webkit-scrollbar-thumb": {
         background: useColorModeValue(
-          'rgba(0,0,0,0.1)',
-          'rgba(255,255,255,0.1)'
+          "rgba(0,0,0,0.1)",
+          "rgba(255,255,255,0.1)"
         ),
-        borderRadius: '4px',
+        borderRadius: "4px",
       },
     }),
     option: (provided: SystemStyleObject, state: { isSelected: boolean }) => ({
       ...provided,
-      borderRadius: 'lg',
+      borderRadius: "lg",
       bg: state.isSelected
-        ? useColorModeValue('primary.100', 'primary.500')
-        : 'transparent',
-      color: 'inherit',
+        ? useColorModeValue("primary.100", "primary.500")
+        : "transparent",
+      color: "inherit",
       _hover: {
         bg: state.isSelected
-          ? useColorModeValue('primary.100', 'primary.500')
-          : useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          ? useColorModeValue("primary.100", "primary.500")
+          : useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       },
       _disabled: {
-        _hover: { bg: 'transparent' },
+        _hover: { bg: "transparent" },
       },
     }),
   };
@@ -360,24 +358,24 @@ const FromToken = ({
             </Box>
             <Box>
               <Text
-                fontSize={{ base: 'lg', sm: '2xl' }}
+                fontSize={{ base: "lg", sm: "2xl" }}
                 fontWeight="bold"
                 textAlign="start"
               >
                 {children}
               </Text>
               <Text
-                fontSize={{ base: 'md', sm: 'lg' }}
+                fontSize={{ base: "md", sm: "lg" }}
                 fontWeight="bold"
                 textAlign="start"
-                color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+                color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
               >
                 {props.data.ibc?.source_channel}
               </Text>
             </Box>
           </Flex>
           <Text
-            fontSize={{ base: 'md', sm: 'xl' }}
+            fontSize={{ base: "md", sm: "xl" }}
             fontWeight="semibold"
             textAlign="end"
             wordBreak="break-word"
@@ -420,11 +418,11 @@ const FromToken = ({
         variant="unstyled"
         fontSize="xs"
         bg={useColorModeValue(lightBg, darkBg)}
-        color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+        color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
         borderRadius="md"
         fontWeight="semibold"
         _focus={{
-          boxShadow: 'none',
+          boxShadow: "none",
         }}
         onClick={(e) => {
           if (e.currentTarget.id === id) {
@@ -449,8 +447,8 @@ const FromToken = ({
     setCheckedItems((pre) => {
       let newItems = pre.map(({ lightBg, darkBg, ...rest }, i) => ({
         ...rest,
-        lightBg: checked[i] ? 'primary.100' : 'blackAlpha.300',
-        darkBg: checked[i] ? 'primary.800' : 'whiteAlpha.300',
+        lightBg: checked[i] ? "primary.100" : "blackAlpha.300",
+        darkBg: checked[i] ? "primary.800" : "whiteAlpha.300",
       }));
       return newItems;
     });
@@ -464,32 +462,32 @@ const FromToken = ({
     <Box
       ref={fromMenuRef}
       position="relative"
-      bg={useColorModeValue('gray.100', 'gray.700')}
+      bg={useColorModeValue("gray.100", "gray.700")}
       borderRadius="xl"
-      boxShadow={isOpen ? '0 0 20px -8px rgba(105, 88, 164, 0.5)' : 'none'}
+      boxShadow={isOpen ? "0 0 20px -8px rgba(105, 88, 164, 0.5)" : "none"}
       p={6}
     >
       <Flex
         position="relative"
         justify="space-between"
-        flexDirection={{ base: 'column', sm: 'row' }}
-        align={{ base: 'start', sm: 'center' }}
+        flexDirection={{ base: "column", sm: "row" }}
+        align={{ base: "start", sm: "center" }}
         mb={4}
       >
-        <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold">
+        <Text fontSize={{ base: "md", sm: "lg" }} fontWeight="bold">
           From
         </Text>
         <Flex
-          maxW={{ sm: '2xs' }}
+          maxW={{ sm: "2xs" }}
           w="full"
           justify="space-between"
           align="center"
         >
-          <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold">
+          <Text fontSize={{ base: "md", sm: "lg" }} fontWeight="bold">
             Available
           </Text>
           <Text
-            fontSize={{ base: 'md', sm: 'lg' }}
+            fontSize={{ base: "md", sm: "lg" }}
             fontWeight="bold"
             color="primary.300"
           >
@@ -513,7 +511,7 @@ const FromToken = ({
           w="fit-content"
           h="fit-content"
           whiteSpace="normal"
-          _focus={{ boxShadow: 'none' }}
+          _focus={{ boxShadow: "none" }}
           onClick={onToggle}
           mr={2}
         >
@@ -534,7 +532,7 @@ const FromToken = ({
                 <Image src={fromItem.imgSrc} />
               </Box>
               <Text
-                fontSize={{ base: 'xl', sm: '3xl' }}
+                fontSize={{ base: "xl", sm: "3xl" }}
                 fontWeight="bold"
                 textAlign="start"
               >
@@ -542,8 +540,8 @@ const FromToken = ({
               </Text>
               <Icon
                 as={isOpen ? FiChevronUp : FiChevronDown}
-                fontSize={{ base: 'xl', sm: '3xl' }}
-                color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+                fontSize={{ base: "xl", sm: "3xl" }}
+                color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
               />
             </Flex>
           ) : (
@@ -564,16 +562,14 @@ const FromToken = ({
         {fromItem ? (
           <Box flex={1}>
             <Editable
-              type="number"
-              min={0}
               variant="unstyled"
-              fontSize={{ base: 'lg', sm: '2xl' }}
+              fontSize={{ base: "lg", sm: "2xl" }}
               fontWeight="bold"
               textAlign="end"
               color={
-                tokenInputValue === '0'
-                  ? useColorModeValue('blackAlpha.700', 'whiteAlpha.700')
-                  : useColorModeValue('blackAlpha.800', 'whiteAlpha.800')
+                tokenInputValue === "0"
+                  ? useColorModeValue("blackAlpha.700", "whiteAlpha.700")
+                  : useColorModeValue("blackAlpha.800", "whiteAlpha.800")
               }
               mb={{ base: 1, sm: 2 }}
               placeholder="0"
@@ -585,7 +581,8 @@ const FromToken = ({
                 defaultValue="0"
                 onChange={(e) => {
                   const value = e.target.value;
-                  const floatRegex = /(0{0,1}[.]\d*)(\d+([.]\d*)?(e[+-]?\d+)?|[.]\d+(e[+-]?\d+)?)/g;
+                  const floatRegex =
+                    /(0{0,1}[.]\d*)(\d+([.]\d*)?(e[+-]?\d+)?|[.]\d+(e[+-]?\d+)?)/g;
                   const floatCheck = value.match(floatRegex);
                   if (floatCheck !== null) {
                     setTokenInputValue(value);
@@ -595,17 +592,17 @@ const FromToken = ({
                   setTokenInputValue(parseFloat(value).toString());
                   return (e.target.value = parseFloat(value).toString());
                 }}
-                _focus={{ boxShadow: 'none' }}
+                _focus={{ boxShadow: "none" }}
               />
             </Editable>
             <Text
-              fontSize={{ sm: 'xl' }}
+              fontSize={{ sm: "xl" }}
               textAlign="end"
               fontWeight="bold"
               color={
-                tokenInputValue === '0'
-                  ? useColorModeValue('blackAlpha.600', 'whiteAlpha.600')
-                  : useColorModeValue('blackAlpha.700', 'whiteAlpha.700')
+                tokenInputValue === "0"
+                  ? useColorModeValue("blackAlpha.600", "whiteAlpha.600")
+                  : useColorModeValue("blackAlpha.700", "whiteAlpha.700")
               }
               mb={0}
             >
@@ -622,8 +619,8 @@ const FromToken = ({
       <Box
         position="absolute"
         zIndex={2000}
-        bg={useColorModeValue('gray.100', 'gray.700')}
-        boxShadow={isOpen ? '0 12px 20px -8px rgba(105, 88, 164, 0.5)' : 'none'}
+        bg={useColorModeValue("gray.100", "gray.700")}
+        boxShadow={isOpen ? "0 12px 20px -8px rgba(105, 88, 164, 0.5)" : "none"}
         borderRadius="xl"
         left={0}
         right={0}
@@ -679,7 +676,7 @@ const FromToken = ({
             position="absolute"
             zIndex={5}
             bottom={{ base: -8, sm: -10 }}
-            color={useColorModeValue('blackAlpha.300', 'whiteAlpha.600')}
+            color={useColorModeValue("blackAlpha.300", "whiteAlpha.600")}
             onClick={() => {
               setFromItem(toItem as dataType);
               setToItem(fromItem as dataType);
@@ -690,7 +687,7 @@ const FromToken = ({
               as={BsHexagonFill}
               w={{ base: 12, sm: 16 }}
               h={{ base: 12, sm: 16 }}
-              color={useColorModeValue('gray.100', 'gray.700')}
+              color={useColorModeValue("gray.100", "gray.700")}
             />
             <Icon
               position="absolute"
@@ -732,59 +729,59 @@ const ToToken = ({
   const customStyles = {
     control: (provided: SystemStyleObject) => ({
       ...provided,
-      bg: useColorModeValue('blackAlpha.50', 'whiteAlpha.50'),
+      bg: useColorModeValue("blackAlpha.50", "whiteAlpha.50"),
     }),
     menu: (provided: SystemStyleObject) => ({
       ...provided,
-      maxH: { base: 'sm', sm: '2xl' },
-      position: 'relative',
+      maxH: { base: "sm", sm: "2xl" },
+      position: "relative",
       mt: 6,
       mb: 0,
     }),
     menuList: (provided: SystemStyleObject) => ({
       ...provided,
-      bg: 'transparent',
-      border: 'none',
-      borderRadius: 'none',
+      bg: "transparent",
+      border: "none",
+      borderRadius: "none",
       py: 0,
       pr: { base: 2, sm: 4 },
       // For Firefox
-      scrollbarWidth: 'auto',
+      scrollbarWidth: "auto",
       scrollbarColor: useColorModeValue(
-        'rgba(0,0,0,0.3) rgba(0,0,0,0.2)',
-        'rgba(255,255,255,0.2) rgba(255,255,255,0.1)'
+        "rgba(0,0,0,0.3) rgba(0,0,0,0.2)",
+        "rgba(255,255,255,0.2) rgba(255,255,255,0.1)"
       ),
       // For Chrome and other browsers except Firefox
-      '&::-webkit-scrollbar': {
-        width: '18px',
+      "&::-webkit-scrollbar": {
+        width: "18px",
         background: useColorModeValue(
-          'rgba(160,160,160,0.1)',
-          'rgba(255,255,255,0.1)'
+          "rgba(160,160,160,0.1)",
+          "rgba(255,255,255,0.1)"
         ),
-        borderRadius: '4px',
+        borderRadius: "4px",
       },
-      '&::-webkit-scrollbar-thumb': {
+      "&::-webkit-scrollbar-thumb": {
         background: useColorModeValue(
-          'rgba(0,0,0,0.1)',
-          'rgba(255,255,255,0.1)'
+          "rgba(0,0,0,0.1)",
+          "rgba(255,255,255,0.1)"
         ),
-        borderRadius: '4px',
+        borderRadius: "4px",
       },
     }),
     option: (provided: SystemStyleObject, state: { isSelected: boolean }) => ({
       ...provided,
-      borderRadius: 'lg',
+      borderRadius: "lg",
       bg: state.isSelected
-        ? useColorModeValue('primary.100', 'primary.500')
-        : 'transparent',
-      color: 'inherit',
+        ? useColorModeValue("primary.100", "primary.500")
+        : "transparent",
+      color: "inherit",
       _hover: {
         bg: state.isSelected
-          ? useColorModeValue('primary.100', 'primary.500')
-          : useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          ? useColorModeValue("primary.100", "primary.500")
+          : useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       },
       _disabled: {
-        _hover: { bg: 'transparent' },
+        _hover: { bg: "transparent" },
       },
     }),
   };
@@ -815,24 +812,24 @@ const ToToken = ({
             </Box>
             <Box>
               <Text
-                fontSize={{ base: 'lg', sm: '2xl' }}
+                fontSize={{ base: "lg", sm: "2xl" }}
                 fontWeight="bold"
                 textAlign="start"
               >
                 {children}
               </Text>
               <Text
-                fontSize={{ base: 'md', sm: 'lg' }}
+                fontSize={{ base: "md", sm: "lg" }}
                 fontWeight="bold"
                 textAlign="start"
-                color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+                color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
               >
                 {props.data.ibc?.source_channel}
               </Text>
             </Box>
           </Flex>
           <Text
-            fontSize={{ base: 'md', sm: 'xl' }}
+            fontSize={{ base: "md", sm: "xl" }}
             fontWeight="semibold"
             textAlign="end"
             wordBreak="break-word"
@@ -866,12 +863,12 @@ const ToToken = ({
     <Box
       ref={toMenuRef}
       position="relative"
-      bg={useColorModeValue('gray.100', 'gray.700')}
-      boxShadow={isOpen ? '0 0 20px -8px rgba(105, 88, 164, 0.5)' : 'none'}
+      bg={useColorModeValue("gray.100", "gray.700")}
+      boxShadow={isOpen ? "0 0 20px -8px rgba(105, 88, 164, 0.5)" : "none"}
       borderRadius="xl"
       p={6}
     >
-      <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight="bold" mb={4}>
+      <Text fontSize={{ base: "md", sm: "lg" }} fontWeight="bold" mb={4}>
         To
       </Text>
       <Flex align="center" maxW="full" h="fit-content">
@@ -881,7 +878,7 @@ const ToToken = ({
           w="fit-content"
           h="fit-content"
           whiteSpace="normal"
-          _focus={{ boxShadow: 'none' }}
+          _focus={{ boxShadow: "none" }}
           onClick={onToggle}
           mr={2}
         >
@@ -902,7 +899,7 @@ const ToToken = ({
                 <Image src={toItem.imgSrc} />
               </Box>
               <Text
-                fontSize={{ base: 'xl', sm: '3xl' }}
+                fontSize={{ base: "xl", sm: "3xl" }}
                 fontWeight="bold"
                 textAlign="start"
               >
@@ -910,8 +907,8 @@ const ToToken = ({
               </Text>
               <Icon
                 as={isOpen ? FiChevronUp : FiChevronDown}
-                fontSize={{ base: 'xl', sm: '3xl' }}
-                color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+                fontSize={{ base: "xl", sm: "3xl" }}
+                color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
               />
             </Flex>
           ) : (
@@ -931,14 +928,14 @@ const ToToken = ({
         </Button>
         {toItem ? (
           <Flex
-            maxW={{ base: 28, sm: 48, md: 'initial' }}
+            maxW={{ base: 28, sm: 48, md: "initial" }}
             wrap="wrap"
             justify="end"
           >
             <Text
-              fontSize={{ base: 'lg', sm: '2xl', md: '3xl' }}
+              fontSize={{ base: "lg", sm: "2xl", md: "3xl" }}
               fontWeight="bold"
-              color={useColorModeValue('blackAlpha.800', 'whiteAlpha.800')}
+              color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
               textAlign="end"
               wordBreak="break-word"
               mb={{ base: 1, sm: 2 }}
@@ -947,10 +944,10 @@ const ToToken = ({
               ≈&nbsp;3.265358
             </Text>
             <Text
-              fontSize={{ base: 'lg', sm: '2xl', md: '3xl' }}
+              fontSize={{ base: "lg", sm: "2xl", md: "3xl" }}
               fontWeight="bold"
               textAlign="end"
-              color={useColorModeValue('blackAlpha.800', 'whiteAlpha.800')}
+              color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
             >
               {toItem.label}
             </Text>
@@ -962,8 +959,8 @@ const ToToken = ({
       <Box
         position="absolute"
         zIndex="dropdown"
-        bg={useColorModeValue('gray.100', 'gray.700')}
-        boxShadow={isOpen ? '0 12px 20px -8px rgba(105, 88, 164, 0.5)' : 'none'}
+        bg={useColorModeValue("gray.100", "gray.700")}
+        boxShadow={isOpen ? "0 12px 20px -8px rgba(105, 88, 164, 0.5)" : "none"}
         borderRadius="xl"
         left={0}
         right={0}
@@ -1026,17 +1023,17 @@ const Rate = ({
 }) => {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'whiteAlpha.200')}
+      bg={useColorModeValue("gray.50", "whiteAlpha.200")}
       borderRadius="xl"
-      boxShadow={useColorModeValue('0 0 2px gray', '0 0 2px white')}
+      boxShadow={useColorModeValue("0 0 2px gray", "0 0 2px white")}
       p={6}
     >
       <Flex
         justify="space-between"
         align="start"
         fontWeight="bold"
-        fontSize={{ md: 'lg' }}
-        color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+        fontSize={{ md: "lg" }}
+        color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
         mb={1}
       >
         <Text flex={1} mr={2}>
@@ -1047,7 +1044,7 @@ const Rate = ({
             as="span"
             isInline
             wrap="wrap"
-            maxW={{ base: 56, sm: 'initial' }}
+            maxW={{ base: 56, sm: "initial" }}
             justify="end"
           >
             <Text>
@@ -1066,10 +1063,10 @@ const Rate = ({
             as="span"
             isInline
             wrap="wrap"
-            fontSize={{ base: 'sm', md: 'md' }}
+            fontSize={{ base: "sm", md: "md" }}
             fontWeight="bold"
-            color={useColorModeValue('blackAlpha.600', 'whiteAlpha.600')}
-            maxW={{ base: 56, sm: 'initial' }}
+            color={useColorModeValue("blackAlpha.600", "whiteAlpha.600")}
+            maxW={{ base: 56, sm: "initial" }}
             justify="end"
           >
             <Text>3.265358&ensp;{toItem.label}</Text>
@@ -1085,21 +1082,21 @@ const Rate = ({
       <Flex
         justify="space-between"
         fontWeight="bold"
-        fontSize={{ md: 'lg' }}
-        color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+        fontSize={{ md: "lg" }}
+        color={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
       >
         <Text>Swap Fee</Text>
         <Text>0.3%</Text>
       </Flex>
       <Divider
-        borderColor={useColorModeValue('blackAlpha.400', 'whiteAlpha.600')}
+        borderColor={useColorModeValue("blackAlpha.400", "whiteAlpha.600")}
         my={{ base: 4, md: 6 }}
       />
       <Flex
         justify="space-between"
         fontWeight="bold"
-        fontSize={{ md: 'lg' }}
-        color={useColorModeValue('blackAlpha.800', 'whiteAlpha.900')}
+        fontSize={{ md: "lg" }}
+        color={useColorModeValue("blackAlpha.800", "whiteAlpha.900")}
       >
         <Text>Estimated Slippage</Text>
         <Text>&lt;&nbsp;0.001%</Text>
@@ -1113,7 +1110,7 @@ export default function () {
   const [fromItem, setFromItem] = useState<dataType>();
   const [toItem, setToItem] = useState<dataType>();
   const [loading, setLoading] = useState(true);
-  const [tokenInputValue, setTokenInputValue] = useState('');
+  const [tokenInputValue, setTokenInputValue] = useState("");
 
   setTimeout(() => {
     setLoading(false);
@@ -1130,13 +1127,13 @@ export default function () {
       setData(getDataArray);
       setFromItem(getDataArray[0]);
       setToItem(getDataArray[3]);
-      setTokenInputValue('0');
+      setTokenInputValue("0");
     }
   }, [loading]);
 
   return (
     <Stack spacing={6} w="full" p={{ base: 4, sm: 6 }}>
-      <Box zIndex={3000} align="end">
+      <Box zIndex={3000} alignSelf="end">
         <Setting />
       </Box>
       <FromToken
