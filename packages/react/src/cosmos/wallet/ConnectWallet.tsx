@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Flex,
-  Center,
   Button,
   useBreakpointValue,
   Box,
   useClipboard,
-} from '@chakra-ui/react';
-import { IoWallet } from 'react-icons/io5';
-import { Card } from './ConnectedShowAddress';
+} from "@chakra-ui/react";
+import { IoWallet } from "react-icons/io5";
+import { Card } from "./ConnectedShowAddress";
 
 interface ConnectWallet {
   address: string;
 }
 
-export default function ({ address = "address not identified yet" }: ConnectWallet) {
+export default function ({
+  address = "address not identified yet",
+}: ConnectWallet) {
   const buttonSize = useBreakpointValue({
-    base: 'md',
-    sm: 'md',
-    md: 'lg',
-    lg: 'lg',
-    xl: 'lg',
-    '2xl': 'lg',
+    base: "md",
+    sm: "md",
+    md: "lg",
+    lg: "lg",
+    xl: "lg",
+    "2xl": "lg",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isConnect, setIsConnect] = useState(false);
@@ -39,7 +40,7 @@ export default function ({ address = "address not identified yet" }: ConnectWall
     <Flex
       justify="center"
       align="center"
-      flexWrap={{ base: 'wrap', md: 'nowrap' }}
+      flexWrap={{ base: "wrap", md: "nowrap" }}
     >
       {isConnect && (
         <Box m={4}>
@@ -54,21 +55,21 @@ export default function ({ address = "address not identified yet" }: ConnectWall
       <Button
         bg="primary.500"
         _hover={{
-          bg: 'primary.400',
+          bg: "primary.400",
           _disabled: {
-            bg: 'primary.300',
+            bg: "primary.300",
           },
         }}
         _active={{
-          bg: 'primary.700',
+          bg: "primary.700",
         }}
         _focus={{
-          bg: 'primary.600',
-          boxShadow: 'outline',
+          bg: "primary.600",
+          boxShadow: "outline",
         }}
         _disabled={{
-          bg: 'primary.300',
-          cursor: 'not-allowed',
+          bg: "primary.300",
+          cursor: "not-allowed",
         }}
         color="white"
         size={buttonSize}
@@ -76,11 +77,9 @@ export default function ({ address = "address not identified yet" }: ConnectWall
         isLoading={isLoading}
         spinner={<></>}
         loadingText="Connecting..."
-        onClick={() =>
-          isConnect ? setIsConnect(false) : setIsLoading(true)
-        }
+        onClick={() => (isConnect ? setIsConnect(false) : setIsLoading(true))}
       >
-        {isConnect ? 'Disconnect' : 'Connect Wallet'}
+        {isConnect ? "Disconnect" : "Connect Wallet"}
       </Button>
     </Flex>
   );
