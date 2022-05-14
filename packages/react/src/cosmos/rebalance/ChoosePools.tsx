@@ -669,7 +669,7 @@ const AllPoolOptions = ({
       // using setTimeout to emulate a call to server
       setTimeout(() => {
         resolve(filter(inputValue));
-      }, 1500);
+      }, 500);
     });
   };
   const value = optionsData.filter(({ key }) =>

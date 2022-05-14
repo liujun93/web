@@ -1114,7 +1114,7 @@ export default function () {
 
   setTimeout(() => {
     setLoading(false);
-  }, 1500);
+  }, 500);
 
   useEffect(() => {
     if (!loading && osmosis.assets.length > 0) {

@@ -353,7 +353,7 @@ export default function DepositTokens({ showIcon }: { showIcon: boolean }) {
   }, []);
 
   useEffect(() => {
-    if (!open) setTimeout(onOpen, 1500);
+    if (!open) setTimeout(onOpen, 500);
     setOpen(true);
   }, [open]);
 
