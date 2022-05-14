@@ -2224,6 +2224,30 @@
   resolved "https://registry.npmjs.org/@cosmjs/utils/-/utils-0.24.1.tgz#0adfefe63b7f17222bc2bc12f71296f35e7ad378"
   integrity sha512-VA3WFx1lMFb7esp9BqHWkDgMvHoA3D9w+uDRvWhVRpUpDc7RYHxMbWExASjz+gNblTCg556WJGzF64tXnf9tdQ==
 
+"@cosmology/core@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.npmjs.org/@cosmology/core/-/core-0.5.1.tgz#4e42b7500636ecf65171f87e68bc6ce958fd0d65"
+  integrity sha512-afoXwYQGQp6/ROk+Xq82dDuzeHgpgK+MRSjde6q5UuN5aoxkPcOq4HXT+SNtn28ua40y/u05Vkpl6kIHBh+r7Q==
+  dependencies:
+    "@babel/runtime" "^7.17.8"
+    "@cosmjs/amino" "0.28.4"
+    "@cosmjs/launchpad" "0.27.1"
+    "@cosmjs/proto-signing" "0.28.4"
+    "@cosmjs/stargate" "0.28.4"
+    "@cosmology/cosmos-registry" "^0.0.13"
+    "@keplr-wallet/types" "0.10.2"
+    "@keplr-wallet/unit" "0.10.2"
+    "@osmonauts/osmosis" "0.4.6"
+    axios "0.26.1"
+    class-autobind "^0.1.4"
+    cosmjs-types "0.5.0"
+    crypto-js "4.1.1"
+    long "5.2.0"
+    protobufjs "6.11.2"
+    retry "0.13.1"
+    secrets.js-grempe "2.0.0"
+    typescript "^4.6.2"
+
 "@cosmology/core@^0.4.0":
   version "0.4.0"
   resolved "https://registry.npmjs.org/@cosmology/core/-/core-0.4.0.tgz#1143036260aa51e3cd19302fcf608457170cd13e"
@@ -2248,7 +2272,7 @@
     secrets.js-grempe "2.0.0"
     typescript "^4.6.2"
 
-"@cosmology/cosmos-registry@^0.0.13":
+"@cosmology/cosmos-registry@0.0.13", "@cosmology/cosmos-registry@^0.0.13":
   version "0.0.13"
   resolved "https://registry.npmjs.org/@cosmology/cosmos-registry/-/cosmos-registry-0.0.13.tgz#cc9657fad756541464246d96315bfc9c156698ac"
   integrity sha512-BW+WcZfWDsDsgBNl3VRhhzWWa4y2M+Ak/K4CGuhl8g71Pp5T8aKu7J5C7h6pVm6fv4DgStmccEJH2PxwyC4Nkw==
@@ -4109,6 +4133,15 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
+"@osmonauts/helpers@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/@osmonauts/helpers/-/helpers-0.3.2.tgz#800602bb06e080782fa5a0bbade6bff0a5ecb815"
+  integrity sha512-juxSajRWzUyz2YDEucwGOPdW9nydMzvDnEi3z3MA407qT7HlgYEtG/dCtNJ3CzKlpT6GqAytMdUkUoHjv5KkuA==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    long "^5.2.0"
+    protobufjs "^6.11.2"
+
 "@osmonauts/osmosis@0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@osmonauts/osmosis/-/osmosis-0.2.0.tgz#08450378728d96a11ed3480d902efc0600a0f395"
@@ -4122,6 +4155,20 @@
     long "^5.2.0"
     protobufjs "^6.11.2"
     rxjs "^7.5.5"
+
+"@osmonauts/osmosis@0.4.6":
+  version "0.4.6"
+  resolved "https://registry.npmjs.org/@osmonauts/osmosis/-/osmosis-0.4.6.tgz#873b62d1856977815bb7c6967428b5b010468f9c"
+  integrity sha512-w7kCjxALSY14UdfVEhnkphlfxIKI4tUN7ylzVY9/FCz5I0WrxjvTQzZSoghNoAxH1gR4fSWj2k1KkdfHDY1yXg==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@cosmjs/amino" "0.28.4"
+    "@cosmjs/proto-signing" "0.28.4"
+    "@cosmjs/stargate" "0.28.4"
+    "@cosmjs/tendermint-rpc" "^0.28.4"
+    "@osmonauts/helpers" "^0.3.2"
+    long "^5.2.0"
+    protobufjs "^6.11.2"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.4.2":
   version "0.4.3"
