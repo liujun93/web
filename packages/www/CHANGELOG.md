@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.0.0-alpha.10](https://github.com/cosmology-finance/web/compare/@cosmology/www@0.0.0-alpha.9...@cosmology/www@0.0.0-alpha.10) (2022-05-14)
+
+**Note:** Version bump only for package @cosmology/www
+
+
+
+
+
 # [0.0.0-alpha.9](https://github.com/cosmology-finance/web/compare/@cosmology/www@0.0.0-alpha.8...@cosmology/www@0.0.0-alpha.9) (2022-04-26)
 
 **Note:** Version bump only for package @cosmology/www
