@@ -2,7 +2,8 @@ const siteUrl = 'https://cosmology.finance';
 const siteAddress = new URL(siteUrl);
 const canonical = siteAddress.href.slice(0, -1);
 const title = 'Cosmology™';
-const description = 'Auto-compounding your cosmos rewards';
+const description =
+  'Cosmology is built from the ground up for Cosmos Staking and Osmosis DeFi to optimize your investment strategies.';
 const fbAppId = null;
 module.exports = {
   title,

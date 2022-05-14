@@ -16,12 +16,12 @@ module.exports = {
     host: siteAddress.host
   },
   emails: {
-    hello: 'hello@cosmology.finance',
-    support: 'support@cosmology.finance',
-    abuse: 'abuse@cosmology.finance',
-    privacy: 'privacy@cosmology.finance',
-    legal: 'legal@cosmology.finance',
-    copyright: 'copyright@cosmology.finance',
-    arbitrationOptOut: 'arbitration-opt-out@cosmology.finance'
+    hello: 'hello@webincubator.com',
+    support: 'support@webincubator.com',
+    abuse: 'abuse@webincubator.com',
+    privacy: 'privacy@webincubator.com',
+    legal: 'legal@webincubator.com',
+    copyright: 'copyright@webincubator.com',
+    arbitrationOptOut: 'arbitration-opt-out@webincubator.com'
   }
 };

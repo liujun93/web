@@ -2,7 +2,7 @@ const siteUrl = 'https://app.cosmology.finance';
 const siteAddress = new URL(siteUrl);
 const canonical = siteAddress.href.slice(0, -1);
 const title = 'Cosmology™';
-const description = 'Auto-compounding your cosmos rewards';
+const description = 'Explore the Cosmos Ecosystem';
 const fbAppId = null;
 module.exports = {
   title,

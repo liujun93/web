@@ -742,15 +742,12 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
       .fill(undefined)
       .map((_, i) => {
         return {
-          label: `${poolOptionToken1[i].name}${
-            poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
-          }`,
-          key: `${poolOptionToken1[i].name}${
-            poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
-          }`,
-          value: `${poolOptionToken1[i].name}${
-            poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
-          }`,
+          label: `${poolOptionToken1[i].name}${poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
+            }`,
+          key: `${poolOptionToken1[i].name}${poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
+            }`,
+          value: `${poolOptionToken1[i].name}${poolOptionToken2[i] ? "/" + poolOptionToken2[i].name : ""
+            }`,
           token1: poolOptionToken1[i],
           token2: poolOptionToken2[i],
         };
@@ -797,15 +794,12 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
     if (removePool) {
       const updatePoolsArr = poolsData.filter((v) => v !== removePool);
       const formatData = {
-        label: `${removePool.token1.name}${
-          removePool.token2 ? "/" + removePool.token2.name : ""
-        }`,
-        key: `${removePool.token1.name}${
-          removePool.token2 ? "/" + removePool.token2.name : ""
-        }`,
-        value: `${removePool.token1.name}${
-          removePool.token2 ? "/" + removePool.token2.name : ""
-        }`,
+        label: `${removePool.token1.name}${removePool.token2 ? "/" + removePool.token2.name : ""
+          }`,
+        key: `${removePool.token1.name}${removePool.token2 ? "/" + removePool.token2.name : ""
+          }`,
+        value: `${removePool.token1.name}${removePool.token2 ? "/" + removePool.token2.name : ""
+          }`,
         token1: removePool.token1,
         token2: removePool.token2,
       };
@@ -829,7 +823,7 @@ export default function ({ useSmallIcons = true }: { useSmallIcons: boolean }) {
         p={{ base: 6, md: 8 }}
       >
         <Text fontSize="xl" fontWeight="bold" textAlign="center" mb={4}>
-          Auto-Compounder Config
+          Rebalancer
         </Text>
         {loading ? (
           <SkeletonPoolsLoading />
