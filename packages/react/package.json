@@ -37,9 +37,12 @@
     "test": "jest --env=jsdom --passWithNoTests",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
-    "storybook:nocache": "start-storybook -p 11001 -s public --no-manager-cache",
-    "storybook": "start-storybook -p 11001 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook:nocache": "start-storybook -p 11001 --no-manager-cache",
+    "storybook": "start-storybook -p 11001",
+    "build-storybook": "build-storybook",
+    "deploy": "AWS_PROFILE=webinc aws s3 sync storybook-static/ s3://storybook.cosmology.finance",
+    "invalidate": "AWS_PROFILE=webinc aws cloudfront create-invalidation --distribution-id EZAAGHMB3BJ2U --paths \"/*\"",
+    "deploy:all": "npm run build-storybook && npm run deploy"
   },
   "bugs": {
     "url": "https://github.com/cosmology-finance/web/issues"
